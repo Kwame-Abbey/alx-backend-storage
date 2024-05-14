@@ -2,9 +2,7 @@
 """Defines a function that lists all documents in collection"""
 
 
-# if __name__ == '__main__':
-def list_all(mongo_collection):
-    all_documents = mongo_collection.find()
-    if all_documents is None:
-        return []
-    return all_documents
+if __name__ == '__main__':
+    def list_all(mongo_collection):
+        """Returns a list of document"""
+        return [] if not mongo_collection else list(mongo_collection.find())
